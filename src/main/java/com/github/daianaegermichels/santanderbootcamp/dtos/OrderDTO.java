@@ -1,25 +1,14 @@
-package com.github.daianaegermichels.santanderbootcamp.domain;
+package com.github.daianaegermichels.santanderbootcamp.dtos;
 
-import jakarta.persistence.*;
 
 import java.util.List;
 
-@Entity
-@Table(name = "orders")
-public class Order {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class OrderDTO {
     private Long id;
     private String orderDate;
     private String status;
-
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CartItem> items;
-
+    private List<CartItemDTO> items;
     private double total;
-
-    public Order() {
-    }
 
     public Long getId() {
         return id;
@@ -45,11 +34,11 @@ public class Order {
         this.status = status;
     }
 
-    public List<CartItem> getItems() {
+    public List<CartItemDTO> getItems() {
         return items;
     }
 
-    public void setItems(List<CartItem> items) {
+    public void setItems(List<CartItemDTO> items) {
         this.items = items;
     }
 

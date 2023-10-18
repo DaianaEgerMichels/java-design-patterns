@@ -1,14 +1,8 @@
-package com.github.daianaegermichels.santanderbootcamp.domain;
-
-import jakarta.persistence.*;
+package com.github.daianaegermichels.santanderbootcamp.dtos;
 
 import java.util.List;
 
-@Entity
-@Table(name = "products")
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ProductDTO {
     private Long id;
     private String name;
     private String description;
@@ -16,14 +10,7 @@ public class Product {
     private int stock;
     private String category;
     private String manufacturer;
-
-    @ElementCollection
-    @CollectionTable(name = "product_images", joinColumns = @JoinColumn(name = "product_id"))
-    @Column(name = "image_url")
     private List<String> images;
-
-    public Product() {
-    }
 
     public Long getId() {
         return id;

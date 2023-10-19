@@ -1,5 +1,7 @@
 # Spring Santander Bootcamp
-Java RESTful API
+Java 17 | Spring Boot 3 | RESTful API
+
+RESTful API simulating e-commerce
 
 ## Diagrame class
 

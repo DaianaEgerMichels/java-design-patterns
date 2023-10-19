@@ -1,8 +1,8 @@
 package com.github.daianaegermichels.santanderbootcamp.service;
 
-import com.github.daianaegermichels.santanderbootcamp.domain.CartItem;
+import com.github.daianaegermichels.santanderbootcamp.dtos.CartItemDTO;
 
 public interface CartItemService {
-    CartItem getCartItemById(Long cartItemId);
+    CartItemDTO getCartItemById(Long cartItemId);
 }
 
